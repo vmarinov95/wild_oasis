@@ -70,6 +70,11 @@ function BookingRow({
     "checked-out": "silver",
   };
 
+  console.log("Table:", Table);
+  console.log("Menus:", Menus);
+  console.log("Modal:", Modal);
+  console.log("ConfirmDelete:", ConfirmDelete);
+
   return (
     <Table.Row>
       <Cabin>{cabinName}</Cabin>
@@ -123,13 +128,14 @@ function BookingRow({
                 Check out
               </Menus.Button>
             )}
-            <Modal.Open opens="delete">
-              {status === "checked-out" && (
+
+            {status === "checked-out" && (
+              <Modal.Open opens="delete">
                 <Menus.Button icon={<HiTrash />} disabled={isDeletingBooking}>
                   Delete booking
                 </Menus.Button>
-              )}
-            </Modal.Open>
+              </Modal.Open>
+            )}
           </Menus.List>
         </Menus.Menu>
 
