@@ -1,4 +1,4 @@
-# React + Vite
+# React + Vite - use the test data below
 
 https://hotel-manager-valentin.netlify.app/
 
